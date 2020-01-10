@@ -52,7 +52,7 @@ account 2020 EBK
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; automatisch erstellt durch
-; bin/1-buche-gewinnermittlung journal.dat 2018
+; bin/1-buche-gewinnermittlung example/journal.dat 2018
 ;
 2018-12-31 Gewinnermittlung ideeller Bereich
     2110    360,00€
@@ -63,7 +63,7 @@ account 2020 EBK
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; automatisch erstellt durch
-; bin/2-buche-freie-ruecklagen journal.dat 2018
+; bin/2-buche-freie-ruecklagen example/journal.dat 2018
 ;
 2018-12-31 Einstellung in freie Rücklage aus ideellem Bereich
     3965    36,00€
@@ -71,7 +71,7 @@ account 2020 EBK
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; automatisch erstellt durch
-; bin/3-buche-ergebnisverwendung journal.dat 2018
+; bin/3-buche-ergebnisverwendung example/journal.dat 2018
 ;
 2018-12-31 Ergebnisverwendung
     3965    -36,00€
@@ -88,7 +88,7 @@ account 2020 EBK
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; automatisch erstellt durch
-; bin/4-buche-abschluss journal.dat 2018
+; bin/4-buche-abschluss example/journal.dat 2018
 ;
 2018-12-31 Abschlussbuchung
     0925    -115,01€
@@ -218,8 +218,8 @@ account 2020 EBK
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; noch zu erledigen:
-; bin/1-buche-gewinnermittlung journal.dat 2019
-; bin/2-buche-freie-ruecklagen journal.dat 2019
-; bin/3-buche-ergebnisverwendung journal.dat 2019
-; bin/4-buche-abschluss journal.dat 2019
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; bin/1-buche-gewinnermittlung example/journal.dat 2019
+; bin/2-buche-freie-ruecklagen example/journal.dat 2019
+; bin/3-buche-ergebnisverwendung example/journal.dat 2019
+; bin/4-buche-abschluss example/journal.dat 2019
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
