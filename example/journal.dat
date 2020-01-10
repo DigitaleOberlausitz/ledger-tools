@@ -1,0 +1,225 @@
+include ../etc/ledger-skr49.dat
+include ledger-members.dat
+
+account 2018 SBK
+account 2019 EBK
+account 2019 SBK
+account 2020 EBK
+
+2018-05-15 (2018.001) Einlage als Vorschuss für notwendige Ausgaben
+    0925    100,00€
+    1601    -100,00€
+2018-05-15 (2018.002) Notarkosten Vereinsanmeldung
+    0925    -24,99€
+    2894    24,99€
+2018-06-20 (2018.003) Mitgliedsbeitrag Alice
+    0925    120,00€
+    2110
+2018-06-20 (2018.004) Mitgliedsbeitrag Bob
+    0925    120,00€
+    2110
+2018-06-20 (2018.005) Mitgliedsbeitrag Chloë
+    0950    119,35€
+    2704    0,65€
+    2110    -120,00€
+2018-07-16 (2018.013) Rückzahlung des Darlehens vom 2018-05-15
+    0925    -100,00€
+    1601    100,00€
+2018-08-14 (2018.016) Einzahlung aus der Kasse aufs Konto
+    0925    -100,00€
+    0945    100,00€
+2018-08-15 (2018.017) Gerichtskosten Ersteintragung
+    0945    -75,00€
+    2894    75,00€
+2018-09-21 (2018.019) Flyerbestellung
+    0950    -37,65€
+    2810    37,65€
+2018-09-03 (2018.020) Kontoführung
+    0945    -3,50€
+    2704    3,50€
+2018-10-01 (2018.021) Kontoführung
+    0945    -3,50€
+    2704    3,50€
+2018-11-01 (2018.022) Kontoführung
+    0945    -3,50€
+    2704    3,50€
+2018-12-03 (2018.023) Kontoführung
+    0945    -3,50€
+    2704    3,50€
+2018-12-28 (2018.025) Kontoführung
+    0945    -3,50€
+    2704    3,50€
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; automatisch erstellt durch
+; bin/1-buche-gewinnermittlung journal.dat 2018
+;
+2018-12-31 Gewinnermittlung ideeller Bereich
+    2110    360,00€
+    2704    -18,15€
+    2810    -37,65€
+    2894    -99,99€
+    9882
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; automatisch erstellt durch
+; bin/2-buche-freie-ruecklagen journal.dat 2018
+;
+2018-12-31 Einstellung in freie Rücklage aus ideellem Bereich
+    3965    36,00€
+    1070
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; automatisch erstellt durch
+; bin/3-buche-ergebnisverwendung journal.dat 2018
+;
+2018-12-31 Ergebnisverwendung
+    3965    -36,00€
+    9889
+2018-12-31 Ergebnisverwendung
+    9882    204,21€
+    9889
+2018-12-31 Ergebnisverwendung
+    3963    168,21€
+    1030
+2018-12-31 Ergebnisverwendung
+    9889    168,21€
+    3963
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; automatisch erstellt durch
+; bin/4-buche-abschluss journal.dat 2018
+;
+2018-12-31 Abschlussbuchung
+    0925    -115,01€
+    2018 SBK
+2018-12-31 Abschlussbuchung
+    0945    -7,50€
+    2018 SBK
+2018-12-31 Abschlussbuchung
+    0950    -81,70€
+    2018 SBK
+2018-12-31 Abschlussbuchung
+    1030    168,21€
+    2018 SBK
+2018-12-31 Abschlussbuchung
+    1070    36,00€
+    2018 SBK
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+2019-01-01 Eröffnungsbuchung
+    0925    115,01€
+    2019 EBK
+2019-01-01 Eröffnungsbuchung
+    0945    7,50€
+    2019 EBK
+2019-01-01 Eröffnungsbuchung
+    0950    81,70€
+    2019 EBK
+2019-01-01 Eröffnungsbuchung
+    1030    -168,21€
+    2019 EBK
+2019-01-01 Eröffnungsbuchung
+    1070    -36,00€
+    2019 EBK
+
+2019-01-01 Beiträge offene Posten
+    2110    -360,00€
+    10001    120,00€
+    10002    120,00€
+    10003    120,00€
+2019-01-07 (2019.001) Mitgliedsbeitrag Alice
+    0925    120,00€
+    10001
+2019-02-01 (2019.002) Kontoführung
+    0945    -3,50€
+    2704    3,50€
+2019-02-07 (2019.003) Mitgliedsbeitrag Chloë
+    0945    120,00€
+    10003
+2019-03-01 (2019.004) Kontoführung
+    0945    -3,50€
+    2704    3,50€
+2019-03-01 (2019.005) PayPal-Kontoverifikation
+    0945    0,01€
+    2420    -0,01€
+2019-03-10 (2019.006) Mitgliedsbeitrag Bob
+    0950    119,25€
+    2704    0,75€
+    10002    -120,00€
+2019-03-22 (2019.007) Webhosting-Gebühren
+    0945    -70,01€
+    2810    70,01€
+2019-04-01 (2019.008) Kontoführung
+    0945    -3,50€
+    2704    3,50€
+2019-05-02 (2019.009) Kontoführung
+    0945    -3,50€
+    2704    3,50€
+2019-06-03 (2019.010) Kontoführung
+    0945    -3,50€
+    2704    3,50€
+2019-06-18 (2019.011) eingegangene Spende
+    0945    250,00€
+    3221
+2019-07-01 (2019.012) Kontoführung
+    0945    -3,50€
+    2704    3,50€
+2019-08-01 (2019.013) Kontoführung
+    0945    -3,50€
+    2704    3,50€
+2019-08-29 (2019.014) Abhebung vom Konto in die Kasse
+    0925    100,00€
+    0945    -100,00€
+2019-08-29 (2019.015) 51 Eintrittskarten à 4€ für Vortrag verkauft
+    0925    204,00€
+    6510
+2019-09-02 (2019.016) Kontoführung
+    0945    -3,50€
+    2704    3,50€
+2019-10-01 (2019.017) Kontoführung
+    0945    -3,50€
+    2704    3,50€
+2019-10-28 (2019.018) 26 Eintrittskarten à 4€ für Vortrag verkauft
+    0925    104,00€
+    6510
+2019-10-28 (2019.019) eingegangene Spende
+    0925    0,10€
+    3223    -0,10€
+2019-10-28 (2019.020) Erstattung Auslagen öfftl. Fachvortrag
+    0925    -54,27€
+    6680    54,27€
+2019-10-28 (2019.021) teilw. Auflösung Rücklage öfftl. Fachvorträge 54,27
+    1030    54,27€
+    3953
+2019-11-01 (2019.022) Kontoführung
+    0945    -3,50€
+    2704    3,50€
+2019-12-02 (2019.023) Kontoführung
+    0945    -3,50€
+    2704    3,50€
+2019-12-18 (2019.024) Druckkosten öffentlicher Fachvortrag und teilw. Auflösung der Rücklage
+    0925    -33,80€
+    6680    33,80€
+    1030    33,80€
+    3953
+2019-12-18 (2019.025) Notarkosten Satzungsänderung
+    0925    -24,99€
+    2894    24,99€
+2019-12-18 (2019.026) erhaltene Spende
+    0925    0,29€
+    3223    -0,29€
+2019-12-30 (2019.027) Kontoführung
+    0945    -3,50€
+    2704    3,50€
+2019-12-31 Betriebsmittelrücklage ideeller Bereich
+    3967    70,01€
+    3967    42,00€
+    1002
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; noch zu erledigen:
+; bin/1-buche-gewinnermittlung journal.dat 2019
+; bin/2-buche-freie-ruecklagen journal.dat 2019
+; bin/3-buche-ergebnisverwendung journal.dat 2019
+; bin/4-buche-abschluss journal.dat 2019
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
