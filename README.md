@@ -15,6 +15,8 @@
     bin/bericht-sbk example/journal.dat 2018
 
 ### 2019 abschließen
+__Achtung:__ Die nachfolgend verwendeten Scripts fügen dem Buchungsjournal neue Buchungen hinzu!
+
     bin/1-buche-gewinnermittlung example/journal.dat 2019
     bin/2-buche-freie-ruecklagen example/journal.dat 2019
     bin/3-buche-ergebnisverwendung example/journal.dat 2019
