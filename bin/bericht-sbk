@@ -1,0 +1,15 @@
+#!/bin/bash
+file=${1:?Keine Journaldatei angegeben}
+year=${2:?Kein Geschäftsjahr angegeben}
+ledger \
+    -f "$file" \
+    bal \
+    "$year SBK" \
+    -b "$year-01-01" \
+    -e "$(($year + 1))-01-01" \
+    --empty \
+    --flat \
+    --invert \
+    --no-total \
+    --related \
+| sed 's/^\(.\{22\}\)\([^:]*:\)*/\1/'

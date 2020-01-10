@@ -1,0 +1,38 @@
+#!/bin/bash
+file=${1:?Keine Journaldatei angegeben}
+year=${2:?Kein Geschäftsjahr angegeben}
+profit_loss () {
+    file=$1
+    year=$2
+    scope=$3
+    name=$4
+    postings=$(
+        ledger \
+            -f "$file" \
+            bal \
+            ":3?$scope" \
+            -b "$year-01-01" \
+            -e "$(($year + 1))-01-01" \
+            --invert \
+            --no-total \
+            --flat \
+            | while read amount account; do
+                printf '    %s    %s\n' \
+                    "$(echo "$account" |sed 's/^.*:\([0-9][0-9][0-9][0-9]\) [^:][^:]*/\1/')" \
+                    "$amount"
+            done
+    )
+    if [ -n "$postings" ]; then
+        printf '%04d-12-31 Gewinnermittlung %s\n%s\n    988%d\n' \
+            "$year" \
+            "$name" \
+            "$postings" \
+            "$scope"
+    fi
+}
+(
+    profit_loss "$file" "$year" 2 'ideeller Bereich'
+    profit_loss "$file" "$year" 4 'Vermögensverwaltung'
+    profit_loss "$file" "$year" 6 'Zweckbetriebe'
+    profit_loss "$file" "$year" 8 'wirtschaftliche Geschäftsbetriebe'
+) >> "$file"

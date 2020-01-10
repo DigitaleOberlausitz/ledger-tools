@@ -1,0 +1,28 @@
+#!/bin/bash
+file=${1:?Keine Journaldatei angegeben}
+year=${2:?Kein Geschäftsjahr angegeben}
+for s in {2,4,5,6,7,8}; do
+    result=$(
+        ledger \
+            -f "$file" \
+            bal \
+            :988 \
+            --limit "account =~ /:(988|3?)$s/" \
+            -b "$year-01-01" \
+            -e "$(($year + 1))-01-01" \
+            --empty \
+            --flat \
+            --invert \
+            --no-total \
+            --related-all \
+        | sed 's/^\(.\{22\}\)\([^:]*:\)*/\1/'
+    )
+    if [ -n "$result" ]; then
+        account=$(printf '%s' "$result" | tail -n 2 | head -n 1 | while read a account; do echo $account; done)
+        echo
+        printf '%s\n' "$result" | tail -n 1 | sed "s/^\(.\{20\}\)  9889 .*/\1  $account/"
+        echo "----------------------$account" | sed 's/./-/g'
+        printf '%s' "$result" | head -n -2
+        echo
+    fi
+done

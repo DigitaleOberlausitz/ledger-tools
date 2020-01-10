@@ -1,0 +1,52 @@
+#!/bin/bash
+file=${1:?Keine Journaldatei angegeben}
+year=${2:?Kein Geschäftsjahr angegeben}
+allowed_free_reserves () {
+    file=$1
+    year=$2
+    accounts=${3:?missing account regexp}
+    transformation=${4:?missing value transformation}
+    ledger \
+        -f "$file" \
+        bal \
+        "$accounts" \
+        -b "$year-01-01" \
+        -e "$year-12-31" \
+        -t "$transformation" \
+    | while read a rest; do
+        echo $a
+    done \
+    | tail -1 \
+    | grep -v '^\s*-'
+}
+ideational_scope=$(allowed_free_reserves "$file" "$year" ':3?2[0-4]' 'total / -10')
+investment_management=$(allowed_free_reserves "$file" "$year" ':3?4' 'total /  -3')
+purposive_business=$(allowed_free_reserves "$file" "$year" ':3?[56]' 'total / -10')
+commercial_business=$(allowed_free_reserves "$file" "$year" ':3?[78]' 'total / -10')
+prefix='Einstellung in freie Rücklage aus'
+(
+    if [ -n "$ideational_scope" ]; then
+        printf '%04d-12-31 %s ideellem Bereich\n    3965    %s\n    1070\n' \
+            "$year" \
+            "$prefix" \
+            "$ideational_scope"
+    fi
+    if [ -n "$investment_management" ]; then
+        printf '%04d-12-31 %s Vermögensverwaltung\n    3965    %s\n    1070\n' \
+            "$year" \
+            "$prefix" \
+            "$investment_management"
+    fi
+    if [ -n "$purposive_business" ]; then
+        printf '%04d-12-31 %s Zweckbetrieben\n    3965    %s\n    1070\n' \
+            "$year" \
+            "$prefix" \
+            "$purposive_business"
+    fi
+    if [ -n "$commercial_business" ]; then
+        printf '%04d-12-31 %s wirtschaftlichen Geschäftsbetrieben\n    3965    %s\n    1070\n' \
+            "$year" \
+            "$prefix" \
+            "$commercial_business"
+    fi
+) >> "$file"

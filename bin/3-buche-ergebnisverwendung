@@ -1,0 +1,44 @@
+#!/bin/bash
+file=${1:?Keine Journaldatei angegeben}
+year=${2:?Kein Geschäftsjahr angegeben}
+offset=988 # put it into the appropriate 103x account for two years after the business year
+ledger \
+    -f "$file" \
+    bal \
+    :39 :988 \
+    -b "$year-01-01" \
+    -e "$(($year + 1))-01-01" \
+    --invert \
+    --no-total \
+    --flat \
+    | while read amount account; do
+        printf '%04d-12-31 Ergebnisverwendung\n    %s    %s\n    9889\n' \
+            "$year" \
+            "$(echo "$account" |sed 's/^.*:\([0-9][0-9][0-9][0-9]\) [^:][^:]*/\1/')" \
+            "$amount"
+    done \
+>> "$file"
+result=$(
+    ledger \
+        -f "$file" \
+        bal \
+        :9889 \
+        -b "$year-01-01" \
+        -e "$(($year + 1))-01-01" \
+        --invert \
+    | while read a b; do
+        echo $a
+    done
+)
+if [ "${result:0:1}" == "-" ]; then
+    echo 'ACHTUNG: negatives Ergebnis, manuell ausgleichen!'
+fi
+(
+    printf '%04d-12-31 Ergebnisverwendung\n    3963    %s\n    %s\n' \
+        "$year" \
+        "$result" \
+        "$(($year - $offset))"
+    printf '%04d-12-31 Ergebnisverwendung\n    9889    %s\n    3963\n' \
+        "$year" \
+        "$result"
+) >> "$file"

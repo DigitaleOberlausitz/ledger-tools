@@ -1,0 +1,40 @@
+#!/bin/bash
+file=${1:?Keine Journaldatei angegeben}
+year=${2:?Kein Geschäftsjahr angegeben}
+next=$(($year + 1))
+sbk=$(ledger \
+    -f "$file" \
+    bal \
+    -b "$year-01-01" \
+    -e "$next-01-01" \
+    --invert \
+    --no-total \
+    --flat \
+    | while read amount account; do
+        printf '%04d-12-31 Abschlussbuchung\n    %s    %s\n    %04d SBK\n' \
+            "$year" \
+            "$(echo "$account" |sed 's/^.*:\([0-9][0-9][0-9][0-9]\) [^:][^:]*/\1/')" \
+            "$amount" \
+            "$year"
+    done
+)
+ebk=$(ledger \
+    -f "$file" \
+    bal \
+    -b "$year-01-01" \
+    -e "$next-01-01" \
+    --no-total \
+    --flat \
+    | while read amount account; do
+        printf '%04d-01-01 Eröffnungsbuchung\n    %s    %s\n    %04d EBK\n' \
+            "$next" \
+            "$(echo "$account" |sed 's/^.*:\([0-9][0-9][0-9][0-9]\) [^:][^:]*/\1/')" \
+            "$amount" \
+            "$next"
+    done
+)
+(
+    echo "$sbk"
+    echo ';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'
+    echo "$ebk"
+) >> "$file"
