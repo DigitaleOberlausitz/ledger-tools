@@ -1047,50 +1047,65 @@ account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0900-0919 Wertpapier
     alias 0915 Sonstige Wertpapiere
     alias 0915
 
-account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0960 Kasse, Bank:0920 Kasse
+account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0975 Kasse, Bank:0920 Kasse
     note Kasse
     alias 0920 Kasse
     alias 0920
 
-account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0960 Kasse, Bank:0920 Kasse:0925 Hauptkasse
+account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0975 Kasse, Bank:0920 Kasse:0925 Hauptkasse
     note Hauptkasse
     alias 0925 Hauptkasse
     alias 0925
 
-account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0960 Kasse, Bank:0920 Kasse:0930 Nebenkasse 1
+account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0975 Kasse, Bank:0920 Kasse:0930 Nebenkasse 1
     note Nebenkasse 1
     alias 0930 Nebenkasse 1
     alias 0930
 
-account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0960 Kasse, Bank:0920 Kasse:0935 Nebenkasse 2
+account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0975 Kasse, Bank:0920 Kasse:0935 Nebenkasse 2
     note Nebenkasse 2
     alias 0935 Nebenkasse 2
     alias 0935
 
-account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0960 Kasse, Bank:0940-0960 Bank:0940 Bank
+account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0975 Kasse, Bank:0940-0975 Bank:0940 Bank (Postbank)
     note Postbank
-    alias 0940 Bank
+    alias 0940 Bank (Postbank)
     alias 0940
 
-account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0960 Kasse, Bank:0940-0960 Bank:0945 Sparkasse
-    note DE30 8505 0100 0232 0642 10
-    alias 0945 Sparkasse
+account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0975 Kasse, Bank:0940-0975 Bank:0945 Bank
+    note Bank
+    alias 0945 Bank
     alias 0945
 
-account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0960 Kasse, Bank:0940-0960 Bank:0950 PayPal
-    note treasurer@digitale-oberlausitz.eu
-    alias 0950 PayPal
+account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0975 Kasse, Bank:0940-0975 Bank:0950 Bank 1
+    note Bank 1
+    alias 0950 Bank 1
     alias 0950
 
-account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0960 Kasse, Bank:0940-0960 Bank:0955 Bank 2
+account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0975 Kasse, Bank:0940-0975 Bank:0955 Bank 2
     note Bank 2
     alias 0955 Bank 2
     alias 0955
 
-account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0960 Kasse, Bank:0940-0960 Bank:0960 Schecks
+account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0975 Kasse, Bank:0940-0975 Bank:0960 Schecks
     note Schecks
     alias 0960 Schecks
     alias 0960
+
+account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0975 Kasse, Bank:0940-0975 Bank:0965 Bank 3
+    note Bank 3
+    alias 0965 Bank 3
+    alias 0965
+
+account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0975 Kasse, Bank:0940-0975 Bank:0970 Bank 4
+    note Bank 4
+    alias 0970 Bank 4
+    alias 0970
+
+account 0 aktive Vermögensposten:0600-0989 UMLAUFVERMÖGEN:0920-0975 Kasse, Bank:0940-0975 Bank:0975 Bank 5
+    note Bank 5
+    alias 0975 Bank 5
+    alias 0975
 
 account 0 aktive Vermögensposten:0990 AKTIVE RECHNUNGSABGRENZUNGSPOSTEN
     note Rechnungsabgrenzungsposten aktiv
@@ -1142,14 +1157,14 @@ account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 
     alias 1015 Rücklagen ideeller Bereich bis 2025
     alias 1015
 
-account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 Gewinnrücklagen:1000-1069 Gebundene Rücklagen:1010-1019 Rücklagen ideeller Bereich:1016 Rücklagen ideeller Bereich bis 2016
-    note Rücklagen ideeller Bereich bis 2016
-    alias 1016 Rücklagen ideeller Bereich bis 2016
+account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 Gewinnrücklagen:1000-1069 Gebundene Rücklagen:1010-1019 Rücklagen ideeller Bereich:1016 Rücklagen ideeller Bereich bis 2026
+    note Rücklagen ideeller Bereich bis 2026
+    alias 1016 Rücklagen ideeller Bereich bis 2026
     alias 1016
 
-account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 Gewinnrücklagen:1000-1069 Gebundene Rücklagen:1010-1019 Rücklagen ideeller Bereich:1017 Rücklagen ideeller Bereich bis 2017
-    note Rücklagen ideeller Bereich bis 2017
-    alias 1017 Rücklagen ideeller Bereich bis 2017
+account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 Gewinnrücklagen:1000-1069 Gebundene Rücklagen:1010-1019 Rücklagen ideeller Bereich:1017 Rücklagen ideeller Bereich bis 2027
+    note Rücklagen ideeller Bereich bis 2027
+    alias 1017 Rücklagen ideeller Bereich bis 2027
     alias 1017
 
 account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 Gewinnrücklagen:1000-1069 Gebundene Rücklagen:1010-1019 Rücklagen ideeller Bereich:1018 Rücklagen ideeller Bereich bis 2018
@@ -1192,14 +1207,14 @@ account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 
     alias 1025 Rücklagen Vermögensverwaltung bis 2025
     alias 1025
 
-account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 Gewinnrücklagen:1000-1069 Gebundene Rücklagen:1020-1029 Rücklagen Vermögensverwaltung:1026 Rücklagen Vermögensverwaltung bis 2016
-    note Rücklagen Vermögensverwaltung bis 2016
-    alias 1026 Rücklagen Vermögensverwaltung bis 2016
+account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 Gewinnrücklagen:1000-1069 Gebundene Rücklagen:1020-1029 Rücklagen Vermögensverwaltung:1026 Rücklagen Vermögensverwaltung bis 2026
+    note Rücklagen Vermögensverwaltung bis 2026
+    alias 1026 Rücklagen Vermögensverwaltung bis 2026
     alias 1026
 
-account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 Gewinnrücklagen:1000-1069 Gebundene Rücklagen:1020-1029 Rücklagen Vermögensverwaltung:1027 Rücklagen Vermögensverwaltung bis 2017
-    note Rücklagen Vermögensverwaltung bis 2017
-    alias 1027 Rücklagen Vermögensverwaltung bis 2017
+account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 Gewinnrücklagen:1000-1069 Gebundene Rücklagen:1020-1029 Rücklagen Vermögensverwaltung:1027 Rücklagen Vermögensverwaltung bis 2027
+    note Rücklagen Vermögensverwaltung bis 2027
+    alias 1027 Rücklagen Vermögensverwaltung bis 2027
     alias 1027
 
 account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 Gewinnrücklagen:1000-1069 Gebundene Rücklagen:1020-1029 Rücklagen Vermögensverwaltung:1028 Rücklagen Vermögensverwaltung bis 2018
@@ -1242,14 +1257,14 @@ account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 
     alias 1035 Rücklagen Zweckbetriebe bis 2025
     alias 1035
 
-account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 Gewinnrücklagen:1000-1069 Gebundene Rücklagen:1030-1039 Rücklagen Zweckbetriebe:1036 Rücklagen Zweckbetriebe bis 2016
-    note Rücklagen Zweckbetriebe bis 2016
-    alias 1036 Rücklagen Zweckbetriebe bis 2016
+account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 Gewinnrücklagen:1000-1069 Gebundene Rücklagen:1030-1039 Rücklagen Zweckbetriebe:1036 Rücklagen Zweckbetriebe bis 2026
+    note Rücklagen Zweckbetriebe bis 2026
+    alias 1036 Rücklagen Zweckbetriebe bis 2026
     alias 1036
 
-account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 Gewinnrücklagen:1000-1069 Gebundene Rücklagen:1030-1039 Rücklagen Zweckbetriebe:1037 Rücklagen Zweckbetriebe bis 2017
-    note Rücklagen Zweckbetriebe bis 2017
-    alias 1037 Rücklagen Zweckbetriebe bis 2017
+account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 Gewinnrücklagen:1000-1069 Gebundene Rücklagen:1030-1039 Rücklagen Zweckbetriebe:1037 Rücklagen Zweckbetriebe bis 2027
+    note Rücklagen Zweckbetriebe bis 2027
+    alias 1037 Rücklagen Zweckbetriebe bis 2027
     alias 1037
 
 account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 Gewinnrücklagen:1000-1069 Gebundene Rücklagen:1030-1039 Rücklagen Zweckbetriebe:1038 Rücklagen Zweckbetriebe bis 2018
@@ -1292,14 +1307,14 @@ account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 
     alias 1045 Rücklagen Geschäftsbetriebe bis 2025
     alias 1045
 
-account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 Gewinnrücklagen:1000-1069 Gebundene Rücklagen:1040-1049 Rücklagen Geschäftsbetriebe:1046 Rücklagen Geschäftsbetriebe bis 2016
-    note Rücklagen Geschäftsbetriebe bis 2016
-    alias 1046 Rücklagen Geschäftsbetriebe bis 2016
+account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 Gewinnrücklagen:1000-1069 Gebundene Rücklagen:1040-1049 Rücklagen Geschäftsbetriebe:1046 Rücklagen Geschäftsbetriebe bis 2026
+    note Rücklagen Geschäftsbetriebe bis 2026
+    alias 1046 Rücklagen Geschäftsbetriebe bis 2026
     alias 1046
 
-account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 Gewinnrücklagen:1000-1069 Gebundene Rücklagen:1040-1049 Rücklagen Geschäftsbetriebe:1047 Rücklagen Geschäftsbetriebe bis 2017
-    note Rücklagen Geschäftsbetriebe bis 2017
-    alias 1047 Rücklagen Geschäftsbetriebe bis 2017
+account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 Gewinnrücklagen:1000-1069 Gebundene Rücklagen:1040-1049 Rücklagen Geschäftsbetriebe:1047 Rücklagen Geschäftsbetriebe bis 2027
+    note Rücklagen Geschäftsbetriebe bis 2027
+    alias 1047 Rücklagen Geschäftsbetriebe bis 2027
     alias 1047
 
 account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1000-1079 Gewinnrücklagen:1000-1069 Gebundene Rücklagen:1040-1049 Rücklagen Geschäftsbetriebe:1048 Rücklagen Geschäftsbetriebe bis 2018
@@ -1437,15 +1452,20 @@ account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1150-1159 
     alias 1158 Andere Gewinnrücklagen
     alias 1158
 
-account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1160+1170 Jahresüberschuss / -Fehlbetrag:1160 Jahresergebnis
+account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1160-1175 Jahresüberschuss / -Fehlbetrag:1160 Gewinn-/Verlustvortrag
     note Gewinn- oder Verlustvortrag
-    alias 1160 Jahresergebnis
+    alias 1160 Gewinn-/Verlustvortrag
     alias 1160
 
-account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1160+1170 Jahresüberschuss / -Fehlbetrag:1170 Vereinskapital / sonstige nicht zeitnah zuverwendende Mittel
-    note Vereinskapital oder sonstige nicht zeitnah zuverwendende Mittel
-    alias 1170 Vereinskapital / sonstige nicht zeitnah zuverwendende Mittel
+account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1160-1175 Jahresüberschuss / -Fehlbetrag:1170 Vereinskapital / sonstige nicht zeitnah zuverwendende Mittel nach § 62 Abs. 3 AO
+    note Vereinskapital oder sonstige nicht zeitnah zuverwendende Mittel (Stiftung/GmbH)
+    alias 1170 Vereinskapital / sonstige nicht zeitnah zuverwendende Mittel nach § 62 Abs. 3 AO
     alias 1170
+
+account 1 passive Vermögensposten:1000-1179 VERMÖGEN / EIGENKAPITAL:1160-1175 Jahresüberschuss / -Fehlbetrag:1175 Genussrechtskapital mit Eigenkapitalcharakter
+    note Genussrechtskapital mit Eigenkapitalcharakter
+    alias 1175 Genussrechtskapital mit Eigenkapitalcharakter
+    alias 1175
 
 account 1 passive Vermögensposten:1180-1199 SONDERPOSTEN:1180 Sonderposten mit Rücklageanteil
     note Sonderposten mit Rücklageanteil
@@ -1477,10 +1497,20 @@ account 1 passive Vermögensposten:1200-1229 RÜCKSTELLUNGEN:1210 Steuerrückste
     alias 1210 Steuerrückstellungen
     alias 1210
 
-account 1 passive Vermögensposten:1200-1229 RÜCKSTELLUNGEN:1220 Sonstige Rückstellungen
+account 1 passive Vermögensposten:1200-1229 RÜCKSTELLUNGEN:1220-1222 SONSTIGE RÜCKSTELLUNGEN:1220 Sonstige Rückstellungen
     note Sonstige Rückstellungen
     alias 1220 Sonstige Rückstellungen
     alias 1220
+
+account 1 passive Vermögensposten:1200-1229 RÜCKSTELLUNGEN:1220-1222 SONSTIGE RÜCKSTELLUNGEN:1221 Urlaubsrückstellungen
+    note Urlaubsrückstellungen
+    alias 1221 Urlaubsrückstellungen
+    alias 1221
+
+account 1 passive Vermögensposten:1200-1229 RÜCKSTELLUNGEN:1220-1222 SONSTIGE RÜCKSTELLUNGEN:1222 Rückstellungen für Personalkosten
+    note Rückstellungen für Personalkosten
+    alias 1222 Rückstellungen für Personalkosten
+    alias 1222
 
 account 1 passive Vermögensposten:1230+1235 FÖRDERUNGSVERPFLICHTUNGEN:1230 Bewilligungen
     note Bewilligungen
