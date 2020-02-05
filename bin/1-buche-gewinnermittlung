@@ -33,6 +33,8 @@ profit_loss () {
 (
     profit_loss "$file" "$year" 2 'ideeller Bereich'
     profit_loss "$file" "$year" 4 'Vermögensverwaltung'
+    profit_loss "$file" "$year" 5 'Zweckbetriebe'
     profit_loss "$file" "$year" 6 'Zweckbetriebe'
+    profit_loss "$file" "$year" 7 'wirtschaftliche Geschäftsbetriebe'
     profit_loss "$file" "$year" 8 'wirtschaftliche Geschäftsbetriebe'
 ) >> "$file"
