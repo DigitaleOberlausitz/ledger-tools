@@ -1,0 +1,47 @@
+#!/bin/bash
+_filter_matching_accounts() {
+    first="$1"
+    if [[ "$first" == "" ]]; then
+        cat -
+    else
+        shift
+        cat - | grep -i "$first" | _filter_matching_accounts $@
+    fi
+}
+_group_account_hierarchy_subtrees() {
+    lines=""
+    while IFS=$'\n' read; do
+        if ! grep -F "$REPLY" <<< "$lines" > /dev/null; then
+            echo "$REPLY"
+            lines=$(printf '%s\n%s' "$lines" "$REPLY")
+        fi
+    done
+}
+_recursively_scan_journal_files_for_accounts() {
+    file="$1"
+    grep -E '^\s*(account|include|note|alias)\s' "$file" \
+    | sed 's/\r//g' \
+    | while IFS=' ' read keyword data; do
+        if [[ "$keyword" == 'include' ]]; then
+            _recursively_scan_journal_files_for_accounts $data
+        elif [[ "$keyword" == 'account' ]]; then
+            printf '\n%s#' "$data"
+        else
+            printf ' %s' "$data"
+        fi
+    done
+}
+_split_subaccounts_by_colon_ignoring_comments() {
+    while IFS='#' read line comments; do
+        IFS=":" read -ra accounts <<< "$line"
+        for i in ${!accounts[@]}; do
+            printf '%*s%s\n' $(($i * 4)) '' "${accounts[$i]}"
+        done
+    done
+}
+
+file="${1:?Keine Journaldatei angegeben}"
+_recursively_scan_journal_files_for_accounts "$file" \
+| _filter_matching_accounts ${@:2} \
+| _split_subaccounts_by_colon_ignoring_comments \
+| _group_account_hierarchy_subtrees
