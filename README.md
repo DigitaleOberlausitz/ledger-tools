@@ -9,6 +9,23 @@
         -e 2020-01-01 \
         balance
 
+### Konten suchen
+
+    bin/ktosuche example/journal.dat ideell versich
+
+Sucht in allen Konten, die in journal.dat selbst oder in eingebundenen Dateien
+definiert sind. Es werden die Konten angezeigt, die alle der genannten Stichworte
+(`ideell` und `versich`) als Wortteile im Namen, der Beschreibung (`note`) oder
+in einem der Aliase tragen. Die gefundenen Konten werden als Hierarchie angezeigt,
+z. B.
+
+    2 Erfolgskonten ideeller Bereich
+        2500-2999 AUSGABEN
+            2510 Übrige Ausgaben
+                2753 Versicherungsbeiträge
+            2550-2559 Personalkosten
+                2555 Sozialversicherungsbeiträge
+
 ### 2018er Berichte
     bin/bericht-einnahmen-ausgaben-nach-bereichen example/journal.dat 2018
     bin/bericht-mittelverwendung example/journal.dat 2018
